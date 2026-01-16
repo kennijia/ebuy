@@ -1,6 +1,6 @@
 # 回测系统框架
 import pandas as pd
-from strategy import simple_dca_strategy, ma_timing_strategy
+from strategy import simple_dca_strategy, ma_timing_strategy, calculate_rsi
 from data_fetcher import fetch_fund_data
 
 def run_backtest(fund_code: str, start: str, end: str, invest_amount: float, strategy_type: str = 'simple'):
@@ -10,6 +10,12 @@ def run_backtest(fund_code: str, start: str, end: str, invest_amount: float, str
         results = simple_dca_strategy(fund_data, invest_amount)
     elif strategy_type == 'ma':
         results = ma_timing_strategy(fund_data, invest_amount)
+    elif strategy_type == 'rsi_low':
+        # 示例：RSI < 30 时买入
+        fund_data = calculate_rsi(fund_data)
+        # 简单改写逻辑：这里只是演示，可以根据需要扩展
+        print("RSI 策略回测逻辑触发（示例）")
+        results = ma_timing_strategy(fund_data, invest_amount) # 暂时复用框架
     else:
         print(f"未知策略类型: {strategy_type}")
         return

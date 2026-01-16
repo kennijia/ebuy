@@ -1,6 +1,9 @@
 # 用于获取基金数据
 import pandas as pd
 import akshare as ak
+import requests
+import json
+import re
 
 def fetch_fund_data(fund_code: str, start: str, end: str) -> pd.DataFrame:
     """获取基金历史净值"""
@@ -28,6 +31,29 @@ def fetch_index_valuation(symbol: str = "沪深300") -> pd.DataFrame:
     # 获取指数估值数据
     df = ak.index_value_hist_funddb(symbol=symbol, indicator="等权市盈率")
     return df
+
+def fetch_realtime_estimation(fund_list: list) -> pd.DataFrame:
+    """
+    高效获取指定基金列表的实时估值 (极速版)
+    """
+    results = []
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    for code in fund_list:
+        try:
+            url = f"http://fundgz.1234567.com.cn/js/{code}.js"
+            response = requests.get(url, headers=headers, timeout=5)
+            if response.status_code == 200:
+                match = re.search(r'jsonpgz\((.*)\);', response.text)
+                if match:
+                    data = json.loads(match.group(1))
+                    results.append({
+                        "基金代码": data['fundcode'],
+                        "基金名称": data['name'],
+                        "估算涨跌幅": data['gszzl']
+                    })
+        except Exception:
+            pass
+    return pd.DataFrame(results)
 
 if __name__ == "__main__":
     # 示例：测试获取某只基金的历史净值
