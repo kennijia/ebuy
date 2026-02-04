@@ -7,14 +7,17 @@ import re
 
 def fetch_fund_data(fund_code: str, start: str, end: str) -> pd.DataFrame:
     """获取基金历史净值"""
-    df = ak.fund_open_fund_info_em(symbol=fund_code, indicator="单位净值走势")
-    df['净值日期'] = pd.to_datetime(df['净值日期'])
-    start_dt = pd.to_datetime(start)
-    end_dt = pd.to_datetime(end)
-    df = df[(df['净值日期'] >= start_dt) & (df['净值日期'] <= end_dt)]
-    df = df.rename(columns={'净值日期': 'date', '单位净值': 'nav'})
-    df = df[['date', 'nav']].reset_index(drop=True)
-    return df
+    try:
+        df = ak.fund_open_fund_info_em(symbol=fund_code, indicator="单位净值走势")
+        df['净值日期'] = pd.to_datetime(df['净值日期'])
+        start_dt = pd.to_datetime(start)
+        end_dt = pd.to_datetime(end)
+        df = df[(df['净值日期'] >= start_dt) & (df['净值日期'] <= end_dt)]
+        df = df.rename(columns={'净值日期': 'date', '单位净值': 'nav'})
+        df = df[['date', 'nav']].reset_index(drop=True)
+        return df
+    except Exception:
+        return pd.DataFrame(columns=['date', 'nav'])
 
 def fetch_fund_rankings(symbol: str = "股票型") -> pd.DataFrame:
     """

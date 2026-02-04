@@ -1,0 +1,47 @@
+{
+  "signals": [
+    {
+      "date": "2026-01-29",
+      "fund_code": "001001",
+      "fund_name": "华夏债券A/B",
+      "signal_type": "SELL",
+      "signal_score": -1,
+      "nav_price": 1.4556,
+      "suggested_amount": 0.0,
+      "reason": "建议卖出/减仓",
+      "execution_date": null,
+      "execution_price": null,
+      "execution_amount": null,
+      "execution_shares": null
+    },
+    {
+      "date": "2026-01-29",
+      "fund_code": "001001",
+      "fund_name": "华夏债券A/B",
+      "signal_type": "SELL",
+      "signal_score": -1,
+      "nav_price": 1.4556,
+      "suggested_amount": 0.0,
+      "reason": "建议卖出/减仓",
+      "execution_date": null,
+      "execution_price": null,
+      "execution_amount": null,
+      "execution_shares": null
+    },
+    {
+      "date": "2026-01-29",
+      "fund_code": "001001",
+      "fund_name": "华夏债券A/B",
+      "signal_type": "SELL",
+      "signal_score": -1,
+      "nav_price": 1.4556,
+      "suggested_amount": 0.0,
+      "reason": "建议卖出/减仓",
+      "execution_date": null,
+      "execution_price": null,
+      "execution_amount": null,
+      "execution_shares": null
+    }
+  ],
+  "timestamp": "2026-01-29T17:32:10.465787"
+}

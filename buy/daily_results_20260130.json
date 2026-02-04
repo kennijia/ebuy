@@ -1,0 +1,99 @@
+{
+  "status": "success",
+  "signal_date": "2026-01-30",
+  "processed_signals": [
+    {
+      "code": "001001",
+      "type": "SELL",
+      "score": 1,
+      "amount": 0.5
+    }
+  ],
+  "optimization_result": {
+    "metrics": {
+      "total_return": 0.0,
+      "win_rate": 0.0,
+      "execution_rate": 0.0,
+      "sharpe_ratio": 0.0,
+      "max_drawdown": 0,
+      "total_signals": 1,
+      "executed_signals": 0,
+      "total_value": 100000,
+      "current_cash": 100000,
+      "current_holdings": {}
+    },
+    "new_params": {
+      "rsi_window": 14,
+      "rsi_oversold": 32,
+      "rsi_overbought": 75,
+      "ma_window": 20,
+      "buy_score_threshold": 1,
+      "sell_threshold": 70,
+      "profit_take_threshold": 0.08,
+      "loss_cut_threshold": -0.2,
+      "dca_loss_threshold": -0.1
+    },
+    "recommendation": "⚠ 策略胜率较低，建议调整参数或观望"
+  },
+  "performance_dashboard": {
+    "timestamp": "2026-01-30T13:09:07.878750",
+    "metrics": {
+      "total_return": 0.0,
+      "win_rate": 0.0,
+      "execution_rate": 0.0,
+      "sharpe_ratio": 0.0,
+      "max_drawdown": 0,
+      "total_signals": 1,
+      "executed_signals": 0,
+      "total_value": 100000,
+      "current_cash": 100000,
+      "current_holdings": {}
+    },
+    "current_params": {
+      "rsi_window": 14,
+      "rsi_oversold": 32,
+      "rsi_overbought": 75,
+      "ma_window": 20,
+      "buy_score_threshold": 1,
+      "sell_threshold": 70,
+      "profit_take_threshold": 0.08,
+      "loss_cut_threshold": -0.2,
+      "dca_loss_threshold": -0.1
+    },
+    "unrealized_pnl": {},
+    "params_evolution": [
+      {
+        "timestamp": "2026-01-29T17:31:33.398749",
+        "params": {
+          "rsi_window": 14,
+          "rsi_oversold": 32,
+          "rsi_overbought": 75,
+          "ma_window": 20,
+          "buy_score_threshold": 1,
+          "sell_threshold": 70,
+          "profit_take_threshold": 0.08,
+          "loss_cut_threshold": -0.2,
+          "dca_loss_threshold": -0.1
+        }
+      },
+      {
+        "timestamp": "2026-01-30T13:09:07.877459",
+        "params": {
+          "rsi_window": 14,
+          "rsi_oversold": 32,
+          "rsi_overbought": 75,
+          "ma_window": 20,
+          "buy_score_threshold": 1,
+          "sell_threshold": 70,
+          "profit_take_threshold": 0.08,
+          "loss_cut_threshold": -0.2,
+          "dca_loss_threshold": -0.1
+        }
+      }
+    ]
+  },
+  "next_actions": [
+    "⚠ 策略胜率偏低，建议观望",
+    "📊 交易执行率低，可能是资金不足"
+  ]
+}

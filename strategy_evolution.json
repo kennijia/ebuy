@@ -1,0 +1,47 @@
+{
+  "history": [
+    [
+      "2026-01-29T17:12:18.487109",
+      {
+        "rsi_window": 14,
+        "rsi_oversold": 32,
+        "rsi_overbought": 75,
+        "ma_window": 20,
+        "buy_score_threshold": 1,
+        "sell_threshold": 70,
+        "profit_take_threshold": 0.08,
+        "loss_cut_threshold": -0.2,
+        "dca_loss_threshold": -0.1
+      }
+    ],
+    [
+      "2026-01-29T17:12:43.516425",
+      {
+        "rsi_window": 14,
+        "rsi_oversold": 32,
+        "rsi_overbought": 75,
+        "ma_window": 20,
+        "buy_score_threshold": 1,
+        "sell_threshold": 70,
+        "profit_take_threshold": 0.08,
+        "loss_cut_threshold": -0.2,
+        "dca_loss_threshold": -0.1
+      }
+    ],
+    [
+      "2026-01-29T17:32:10.466797",
+      {
+        "rsi_window": 14,
+        "rsi_oversold": 32,
+        "rsi_overbought": 75,
+        "ma_window": 20,
+        "buy_score_threshold": 1,
+        "sell_threshold": 70,
+        "profit_take_threshold": 0.08,
+        "loss_cut_threshold": -0.2,
+        "dca_loss_threshold": -0.1
+      }
+    ]
+  ],
+  "timestamp": "2026-01-29T17:32:10.467950"
+}
